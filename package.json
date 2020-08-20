@@ -1,0 +1,27 @@
+{
+  "name": "twitch_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node build/index.js",
+    "tsc": "tsc",
+    "make": "tsc && pkg . -d --out-path ./bin",
+    "build:frontend": "npm run build --prefix ./frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "@types/ws": "^7.2.6",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "pkg": "^4.4.9",
+    "typescript": "^3.9.7",
+    "ws": "^7.3.1"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js"
+  },
+  "bin": "build/index.js"
+}
